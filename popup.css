@@ -1,0 +1,260 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 12px;
+  width: 600px;   
+  height: 480px;  
+  overflow: hidden;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 100%;
+  overflow-y: auto;  
+}
+
+
+.game {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fafafa;
+  cursor: default;
+}
+
+.game-summary {
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.game-chevron {
+  font-size: 0.9rem;
+  color: #888;
+  text-align: right;
+  transition: transform 0.2s ease;
+}
+
+.game-open .game-chevron {
+  transform: rotate(180deg);
+}
+
+
+.team {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+  font-weight: 600;
+}
+.team-tricode {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.team-name{
+  font-size: 0.8rem;
+  color: #666;
+}
+.team-away {
+  text-align: left;
+}
+
+.team-home {
+    align-items: flex-end;
+  text-align: right;
+}
+
+.score {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 12px;
+}
+
+.score-win-left::before,
+.score-win-right::after {
+  content: "\1F3C6"; /* trophy */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+}
+
+.score-win-left::before {
+  left: -16px;
+}
+
+.score-win-right::after {
+  right: -16px;
+}
+
+.status-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  gap: 6px;
+}
+
+.status-live::before {
+  content: "\1F534"; /* red dot */
+  font-size: 0.75rem;
+}
+
+
+
+.team-logo {
+  margin-top: 4px;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.boxscore-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  table-layout: fixed;
+}
+
+.boxscore-table th,
+.boxscore-table td {
+  padding: 6px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+
+.boxscore-table th:first-child,
+.boxscore-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  white-space: normal;
+}
+
+.boxscore-table th:not(:first-child),
+.boxscore-table td:not(:first-child) {
+  text-align: right;
+}
+
+.boxscore-player {
+  display: block;
+}
+
+.boxscore-dnp {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+
+
+
+
+
+.boxscore-table th:first-child,
+.boxscore-table td:first-child {
+  width: 130px;
+  text-align: left;
+  font-weight: 600;
+  padding-right: 8px;
+  white-space: normal;
+}
+
+.boxscore-table th:not(:first-child),
+.boxscore-table td:not(:first-child) {
+  text-align: right;
+  white-space: nowrap;
+}
+
+
+.boxscore-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4px;
+}
+
+.boxscore-collapse {
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #cfd8dc;
+  border-radius: 999px;
+  background: #eceff1;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.boxscore-collapse:hover {
+  background: #dfe4e7;
+  border-color: #b0bec5;
+}
+
+.boxscore-toggle-btn {
+  justify-self: center;
+  margin-top: 8px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #cfd8dc;
+  border-radius: 999px;
+  background: #eceff1;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.boxscore-toggle-btn:hover {
+  background: #dfe4e7;
+  border-color: #b0bec5;
+}
+
+
+.game-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  grid-column: 1 / -1;
+}
+
+
+
+.game-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1565c0;
+  text-decoration: none;
+}
+
+.game-link:hover {
+  text-decoration: underline;
+}
+
+
+.score-icon {
+  margin: 0 4px;
+}
+
+.status-live {
+  margin-right: 6px;
+}
+
+
+
+

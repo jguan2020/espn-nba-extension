@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "NBA Games Live Scores Daily",
+  "version": "1.1.2",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [],
+"host_permissions": [
+  "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/*"
+],
+    "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "128": "images/icon128.png"
+  }
+}
